@@ -1,0 +1,14 @@
+{
+    "aplName" : "/learning_tool",
+    "pages" : [
+         {"url" : "/main", 
+          "path" : "C:\\cesar\\learning_tool\\view\\index.html", 
+          "action" : {"url" : "", "path" : ""}},
+         {"url" : "/train.html", 
+          "path" : "C:\\cesar\\learning_tool\\view\\train.html", 
+          "action" : {"url" : "", "path" : ""}},
+         {"url" : "/test.ejs", 
+          "path" : "C:\\cesar\\learning_tool\\view\\test.ejs", 
+          "action" : {"url" : "/getQA.do", "path" : "C:\\cesar\\learning_tool\\server\\getQAAction.js"}}
+    ]
+}

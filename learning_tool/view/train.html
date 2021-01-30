@@ -1,0 +1,48 @@
+<html>
+<head><meta charset="utf-8"/><title>learning_tool</title>
+<script type="text/javascript">
+<!--
+	function load() {
+	   frm1.txtInput.focus();
+	}
+-->
+</script>
+</head>
+<body onload="load()">
+	<form name="frm1">
+	   <p><textarea name="txtInput" cols="100" rows="15"></textarea></p>
+	   </br>
+	   <p><input type="button" name="btnCommit" style="width:20%" value="確定" onclick="check()"></p>
+	</form>
+</body>
+<script type="text/javascript">
+<!--
+	var cnt = 5;
+	var txtSQL = "";
+
+	function check() {
+	   if(txtSQL == ""){
+	      txtSQL = frm1.txtInput.value;
+	   }
+
+	   if(frm1.txtInput.value == "" || txtSQL != frm1.txtInput.value) {
+	      alert("マスター、やる気ありますか？　テキスト入力欄はちゃんと入力してください。");
+	      frm1.txtInput.focus();
+	      return;
+	   }
+
+	   --cnt;
+
+	   if(cnt == 0) {
+	      txtSQL = "";
+	      alert("本日の練習は終了です。マスター、お疲れ様でした。");
+	      window.close();
+	   } else {
+	      alert("マスター、あと" + cnt + "回です。がんばってください。");
+	      frm1.txtInput.value = "";
+	      frm1.txtInput.focus();
+	   }
+	}
+-->
+</script>
+</html>

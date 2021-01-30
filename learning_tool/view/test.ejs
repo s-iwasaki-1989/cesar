@@ -1,0 +1,62 @@
+<html lang="ja">
+  <head><meta charset="utf-8"/><title>learning_tool</title>
+  </head>
+  <body onload="load()">
+    <p><b>一問一答</b></p>
+    <form name="frm1" method="POST" action="/getQA.do">
+      <div>
+        <label for="areaQuestion">問題</br>
+        <textarea readonly name="areaQuestion" cols=100 rows="5"><%= valQuestion %></textarea></label>
+      </div>
+      <div>
+        <label for="txtAnswer">解答</br>
+        <textarea name="txtAnswer" cols=100 rows="5"></textarea></label>
+      </div>
+      <div>
+        <input type="button" name="btnAnswer" style="width=20%" value="OK" onclick="cmdAnswer()">
+      </div>
+      <input type="hidden" id="qno" name="qno" value="<%= valQNo %>">
+      <input type="hidden" id="answer" name="answer" value="<%= valAnswer %>">
+    </form>
+  </body>
+  <script type="text/javascript">
+  <!--
+
+        function load() {
+           // 最初の表示の際の再読み込み処理であればここで処理を抜ける
+           alert("マスター、勝負です");
+           frm1.txtAnswer.focus();
+        }
+
+        function cmdAnswer() {
+           var valAnswer = frm1.txtAnswer.value;
+           if (chkInput(valAnswer) == false) {
+              frm1.txtAnswer.focus();
+              return;
+           }
+
+           var condRslt = window.confirm("正解です。一問一答を続行しますか？");
+
+           if(condRslt = false) {
+              window.close();
+           }
+
+           frm1.txtAnswer.value = "";
+           frm1.submit();
+           //load();
+        }
+
+        function chkInput(answer) {
+           if(answer == ""){
+              alert("マスター、本当にやる気ありますか？\nOKボタンは解答を入力してから押してください");
+              return false;
+           }
+           if(answer != frm1.answer.value) {
+              alert("違います");
+              return false;
+           }
+           return true;
+        }
+  -->
+  </script>
+</html>
